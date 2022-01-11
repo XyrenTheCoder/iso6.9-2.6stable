@@ -20,7 +20,7 @@ Also put your discord id in:
 
 To get your id, run `?userinfo` or `auserinfo` (slash commands also works) in any servers with Dyno or Arcane and copy your bot's client ID.
 
-# Commands (for 22122021a and every next updates)
+# Commands (for all versions in this repo)
 - Use `]help` to get command list, use `]ahelp` to get alias list.
 
 - Admin commands are included (use `sudo help` to see detailed command list)
