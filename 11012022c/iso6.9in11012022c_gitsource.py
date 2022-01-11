@@ -912,6 +912,7 @@ async def decode(ctx, code: str):
 
 # stroketranslate
 @bot.command(aliases=['stroktrans'])
+@commands.cooldown(1, 5, commands.BucketType.user)
 async def stroktranslate(ctx, *, strok: str):
 # var
     a = ["amogus ", "are ", "arcane ", "am ", "archie ", "Arch ", "arg1 ", "apt ", "afk ", "autocorrect ", "a ", "archbot ", "autocarrot "]
