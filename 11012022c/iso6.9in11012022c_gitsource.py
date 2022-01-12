@@ -215,7 +215,16 @@ async def _8ball(ctx, *, question):
             "My reply is no.",
             "My sources say no.",
             "Outlook not so good.",
-            "Its a secret :>"
+            "Its a secret :>",
+            "Can\'t tell you lmao",
+            "Is Trump\'s skin orange?",
+            "What do you think",
+            "No. Just, no",
+            "I'\m an 8ball, not a dealwithyourcrap ball",
+            "if not not False:",
+            "if not not True:",
+            "null",
+            "Imagine me not wanting to answer this question"
     ]
     ballEmbed = discord.Embed(title=f':8ball: {question}', description=f'{random.choice(responses)}')
     await ctx.send(embed=ballEmbed)
@@ -225,7 +234,7 @@ async def _8ball(ctx, *, question):
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def ping(ctx):
     await ctx.send(f'Client Latency: {round(bot.latency * 1000)}ms')
-    print(f'[log] {ctx.author} requested ]ping.')
+    print(f'[log] {ctx.author} requested ]ping. Latency returned was {round(bot.latency * 1000)}ms')
 
 # fstab var
 fstaburl1 = "https://cdn.discordapp.com/attachments/878297190576062515/879845618636423259/IMG_20210825_005111.jpg"
@@ -311,13 +320,13 @@ async def mute(ctx, member: discord.Member, *, reason=None):
     if not mutedRole:
         mutedRole = await guild.create_role(name="Muted")
         for channel in guild.channels: await channel.set_permissions(mutedRole, speak=False, send_messages=False, read_message_history=True, read_messages=False)
-    embed = discord.Embed(title="muted", description=f"{member.mention} was muted successfully.", colour=discord.Colour.light_gray())
+    embed = discord.Embed(title="Mute user", description=f":white_check_mark: *{member.mention} has been muted*", colour=discord.Colour.light_gray())
     embed.add_field(name="reason:", value=reason, inline=False)
     await ctx.send(embed=embed)
     print(f'[log] {ctx.author} requested ]mute.')
     await member.add_roles(mutedRole, reason=reason)
-    await member.send(f"you have been muted from: {guild.name}\n reason: {reason}")
-    print(f'[log] {ctx.author} \'s DM has successfully sent.')
+    await member.send(f":warning: You have been muted from **{guild.name}**\n _Reason: {reason}_")
+    print(f'[log] {ctx.author}\'s DM has successfully sent.')
 
 @bot.command()
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -325,9 +334,9 @@ async def mute(ctx, member: discord.Member, *, reason=None):
 async def unmute(ctx, member: discord.Member):
    mutedRole = discord.utils.get(ctx.guild.roles, name="Muted")
    await member.remove_roles(mutedRole)
-   await member.send(f" you have unmuted from: - {ctx.guild.name}")
-   print(f'[log] {ctx.author} \'s DM has successfully sent.')
-   embed = discord.Embed(title="unmute", description=f" unmuted-{member.mention}",colour=discord.Colour.light_gray())
+   await member.send(f":white_check_mark: You have been unmuted from **{ctx.guild.name}**")
+   print(f'[log] {ctx.author}\'s DM has successfully sent.')
+   embed = discord.Embed(title="Unmute user", description=f"*{member.mention} has been unmuted*",colour=discord.Colour.light_gray())
    await ctx.send(embed=embed)
    print(f'[log] {ctx.author} requested ]unmute.')
 
@@ -336,7 +345,7 @@ async def unmute(ctx, member: discord.Member):
 @commands.has_permissions(ban_members = True)
 async def ban(ctx, member : discord.Member, *, reason = None):
     await member.ban(reason = reason)
-    await ctx.send(f'User {member} has been banned successfully.')
+    await ctx.send(f':white_check_mark: **{member} has been banned successfully.** | Reason: {reason}')
     print(f'[log] {ctx.author} requested ]ban.')
 
 @bot.command()
@@ -345,7 +354,7 @@ async def ban(ctx, member : discord.Member, *, reason = None):
 async def unban(ctx, id: int):
     user = await bot.fetch_user(id)
     await ctx.guild.unban(user)
-    await ctx.reply(f"I unbanned {user}")
+    await ctx.reply(f:white_check_mark: **{user} has been unbanned.**")
     print(f'[log] {ctx.author} requested ]unban.')
 
 # snipe
@@ -518,7 +527,7 @@ async def stroke(ctx, size: int):
     def random_string_generator(str_size, allowed_chars): return ''.join(random.choice(allowed_chars) for x in range(str_size))
     chars = string.ascii_letters + string.punctuation
     if size > 550:
-        await ctx.send(f'{size} is more than the limit. The max character limit is set to 550 to avoid spam.')
+        await ctx.send(f'{size} is more than the `550 character `limit. Too mucj strok.')
         print(f'[log] {ctx.author} returned an error: Max character limit reached.')
     else:
         await ctx.send(random_string_generator(size, chars))
@@ -920,8 +929,8 @@ async def stroktranslate(ctx, *, strok: str):
     c = ["cum ", "cat ", "cock ", "chat ", "cyan ", "cpp ", "command ", "client ", "copy ", "copyright ", "code ", "config ", "click ", "cursed ", "cursor "]
     d = ["daemon ", "dog ", "dumb ", "database ", "do ", "dood ", "directory ", "discord ", "distro ", "delete ", "deez nuts ", "dont "]
     e = ["exit ", "eat ", "easy ", "error ", "eyes ", "epic ", "evaluate ", "english "]
-    f = ["fuck ", "fish ", "false", "fucking ", "frick ", "file ", "false ", "firmware ", "find ", "fstab ", "fire ", "forkbomb ", "fucked "]
-    g = ["good ", "github ", "give ", "gcc (compiler) ", "garbage ", "game ", "GNU/Linux ", "gentoo ", "guild ", "gonna ", "gay "]
+    f = ["fuck ", "fish ", "false", "fucking ", "frick ", "file ", "false ", "firmware ", "find ", "fstab ", "fire ", "forkbomb ", "fucked ", "fling "]
+    g = ["good ", "github ", "give ", "gcc (compiler) ", "garbage ", "game ", "GNU/Linux ", "gentoo ", "guild ", "gonna ", "gay ", "google (googele) "]
     h = ["how ", "(r/TheLetter)H ", "hello ", "hub ", "head ", "header (file) ", "home ", "h4xx0r ", "hack ", "heck ", "hell "]
     i = ["i ", "integer ", "imposter ", "image ", "is ", "idk ", "imagine ", "im ", "install ", "int ", "in ", "init.d ", "isobot ", "import ", "ImportError "]
     j = ["json ", "java ", "javascript ", "just ", "Joe ", "join "]
@@ -994,3 +1003,4 @@ bot.run(token)
 
 
 # btw i use arch
+# if the code doesnt work just run it on arch btw
