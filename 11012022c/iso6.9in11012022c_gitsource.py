@@ -155,7 +155,7 @@ async def on_message(message):
     if message.content.startswith("ayo") and not message.author.bot:
         await message.reply("ayo")
         print(f"[interact] {bot.user} reacted.")
-    if message.content.startswith(":eyes:") and not message.author.bot:
+    if message.content.startswith("👀") and not message.author.bot:
         await message.reply(":eues: :eyes:")
         print(f"[interact] {bot.user} reacted.")
     if message.content.startswith("wtf") and not message.author.bot:
