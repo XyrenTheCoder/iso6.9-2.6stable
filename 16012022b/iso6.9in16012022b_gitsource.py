@@ -501,7 +501,16 @@ async def _8ball(ctx, *, question):
             "My reply is no.",
             "My sources say no.",
             "Outlook not so good.",
-            "Its a secret :>"
+            "Its a secret :>",
+            "Can\'t tell you lmao",
+            "Is Trump\'s skin orange?",
+            "What do you think",
+            "No. Just, no",
+            "I'\m an 8ball, not a dealwithyourcrap ball",
+            "if not not False:",
+            "if not not True:",
+            "null",
+            "Imagine me not wanting to answer this question"
     ]
     ballEmbed = discord.Embed(title=f':8ball: {question}', description=f'{random.choice(responses)}')
     await ctx.send(embed=ballEmbed)
