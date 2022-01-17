@@ -222,7 +222,7 @@ async def cmdinfo(ctx, search: str):
         await ctx.send(embed=embed)
         print(f"[log] {ctx.author} requested ]cmdinfo.")
     elif search == "invites":
-        embed=discord.Embed(title="\"invites\" command:", description="shows a user's server invite links count", color=discord.Color.blue())
+        embed=discord.Embed(title="\"invites\" command:", description="shows a user's invited count (people)", color=discord.Color.blue())
         embed.add_field(name=".", value='usage: `]invites [mention_user]/[user_id]`\ncooldown (second): `5`\ncatagory: `informative`\naliases: `none`', inline=False)
         embed.set_footer(text='*<> is required, [] is optional.\nnone means None.*')
         await ctx.send(embed=embed)
