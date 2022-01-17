@@ -20,6 +20,12 @@ Also put your discord id in:
 
 To get your id, run `?userinfo` or `auserinfo` (slash commands also works) in any servers with Dyno or Arcane and copy your bot's client ID.
 
+In order to use reddit commands, put your Reddit client id and client secret in:
+
+> reddit = praw.Reddit(client_id='reddit_client_id',
+                     client_secret='reddit_client_secret',
+                     user_agent='idk copied from thatOneArchUser', check_for_async=False)
+
 # Commands (for all versions in this repo)
 - Use `]help` to get command list, use `]ahelp` to get alias list.
 
