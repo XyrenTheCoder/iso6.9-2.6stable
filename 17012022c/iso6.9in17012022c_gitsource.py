@@ -24,8 +24,8 @@ token = "token"
 cid = "client_id"
 owner = ["αrchιshα#5518", "notsniped#4573", "thatOneArchUser#5794"]
 oid = [706697300872921088, 738290097170153472, 705462972415213588]
-reddit = praw.Reddit(client_id='_pazwWZHi9JldA',
-                     client_secret='1tq1HM7UMEGIro6LlwtlmQYJ1jB4vQ',
+reddit = praw.Reddit(client_id='reddit_client_id',
+                     client_secret='reddit_client_secret',
                      user_agent='idk copied from thatOneArchUser', check_for_async=False)
 
 now = datetime.now()
