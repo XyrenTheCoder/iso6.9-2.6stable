@@ -20,7 +20,7 @@ from keep_alive import keep_alive
 intents = discord.Intents(messages=True, members=True, guilds=True)
 
 # var
-token = "OTE1NDg4MDg3NTU0MDAyOTU2.YacUuQ.vdyB7TYGFwYQHgSpQ6DyM0544bI"
+token = "token"
 cid = "client_id"
 owner = ["αrchιshα#5518", "notsniped#4573", "thatOneArchUser#5794"]
 oid = [706697300872921088, 738290097170153472, 705462972415213588]
