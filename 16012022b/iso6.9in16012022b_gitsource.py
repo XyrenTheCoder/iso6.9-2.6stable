@@ -979,7 +979,7 @@ async def invites(ctx, *, user : discord.User=None):
         await ctx.reply(embed=e)
         print(f'[log] {ctx.author} requested ]invites.')
     elif user.bot:
-        await ctx.reply('This is a bbotnot a user')
+        await ctx.reply('This is a bot not a user')
         print(f'[log] {ctx.author} returned an error: Bad argument.')
     else:
         for i in await ctx.guild.invites():
