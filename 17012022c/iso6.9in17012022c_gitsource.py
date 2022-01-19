@@ -20,12 +20,12 @@ from keep_alive import keep_alive
 intents = discord.Intents(messages=True, members=True, guilds=True)
 
 # var
-token = "tokn"
+token = "OTE1NDg4MDg3NTU0MDAyOTU2.YacUuQ.vdyB7TYGFwYQHgSpQ6DyM0544bI"
 cid = "client_id"
 owner = ["αrchιshα#5518", "notsniped#4573", "thatOneArchUser#5794"]
 oid = [706697300872921088, 738290097170153472, 705462972415213588]
-reddit = praw.Reddit(client_id='reddit_client_id',
-                     client_secret='reddit_client_secret',
+reddit = praw.Reddit(client_id='_pazwWZHi9JldA',
+                     client_secret='1tq1HM7UMEGIro6LlwtlmQYJ1jB4vQ',
                      user_agent='idk copied from thatOneArchUser', check_for_async=False)
 
 now = datetime.now()
@@ -1216,18 +1216,18 @@ async def decode(ctx, code: str):
 async def stroktranslate(ctx, *, strok: str):
 # var
     a = ["amogus ", "are ", "arcane ", "am ", "archie ", "Arch ", "arg1 ", "apt ", "afk ", "autocorrect ", "a ", "archbot ", "autocarrot "]
-    b = ["bytes ", "bot ", "but ", "beg ", "bored ", "baka ", "bye ", "bad ", "btw ", "boolean ", "bootloader ", "because ", "boot ", "balls ", "black ", "back ", "backspace ", "\\b "]
-    c = ["cum ", "cat ", "cock ", "chat ", "cyan ", "cpp ", "command ", "client ", "copy ", "copyright ", "code ", "config ", "click ", "cursed ", "cursor "]
+    b = ["BadArgument ", "bytes ", "bot ", "but ", "beg ", "bored ", "baka ", "bye ", "bad ", "btw ", "boolean ", "bootloader ", "because ", "boot ", "balls ", "black ", "back ", "backspace ", "\\b "]
+    c = ["CommandOnCooldown ", "cum ", "cat ", "cock ", "chat ", "cyan ", "cpp ", "command ", "client ", "copy ", "copyright ", "code ", "config ", "click ", "cursed ", "cursor "]
     d = ["daemon ", "dog ", "dumb ", "database ", "do ", "dood ", "directory ", "discord ", "distro ", "delete ", "deez nuts ", "dont "]
     e = ["exit ", "eat ", "easy ", "error ", "eyes ", "epic ", "evaluate ", "english "]
     f = ["fuck ", "fish ", "false ", "fucking ", "frick ", "file ", "false ", "firmware ", "find ", "fstab ", "fire ", "forkbomb ", "fucked "]
     g = ["good ", "github ", "give ", "gcc (compiler) ", "garbage ", "game ", "GNU/Linux ", "gentoo ", "guild ", "gonna ", "gay "]
     h = ["how ", "(r/TheLetter)H ", "hello ", "hub ", "head ", "header (file) ", "home ", "h4xx0r ", "hack ", "heck ", "hell "]
-    i = ["i ", "integer ", "imposter ", "image ", "is ", "idk ", "imagine ", "im ", "install ", "int ", "in ", "init.d ", "isobot ", "import ", "ImportError "]
+    i = ["InvaildArgument ", "i ", "integer ", "imposter ", "image ", "is ", "idk ", "imagine ", "im ", "install ", "int ", "in ", "init.d ", "isobot ", "import ", "ImportError "]
     j = ["json ", "java ", "javascript ", "just ", "Joe ", "join "]
     k = ["ok ", "kwargs ", "keyword ", "karma ", "kreate (because i use kde) ", "Kde ", "Kali ", "kill ", "kernel ", "kick "]
     l = ["lol ", "like ", "Linux ", "lag ", "lagging ", "lick ", "love "]
-    m = ["mogus ", "me ", "my ", "more ", "mate ", "meme ", "masterhacker ", "micro$hit ", "minecraft "]
+    m = ["MissingPermissions ", "MissingRequiredArgument ", "me ", "my ", "more ", "mate ", "meme ", "masterhacker ", "micro$hit ", "minecraft "]
     n = ["null ", "nuts ", "never ", "no ", "not ", "newline ", "nano (open-source garbage) ", "nexus ", "new ", "name ", "nuke ", "nitro ", "nt (kernel is bad) ", "notsniped ", "node.js ", "\\n "]
     o = ["os ", "or ", "only ", "Operating System ", "open-source ", "omg ", "of ", "openSUSE ", "offline ", "on ", "open ", "ok "]
     p = ["penis ", "people ", "prompt ", "python ", "purge ", "pacman ", "piracy ", "ping ", "problem ", "pog ", "poggers "]
@@ -1280,10 +1280,41 @@ async def stroktranslate(ctx, *, strok: str):
         elif letter == "8": arr.append("8 ")
         elif letter == "9": arr.append("9 ")
         elif letter == "0": arr.append("0 ")
-        elif letter == " ": arr.append("\{space\} ")
+        elif letter == " ": arr.append("{space} ")
+        elif letter == "~": arr.append("{tilde} ")
+        elif letter == "`": arr.append("{acute} ")
+        elif letter == "!": arr.append("{exclamation_mark} ")
+        elif letter == "@": arr.append("{at} ")
+        elif letter == "#": arr.append("{sharp} ")
+        elif letter == "$": arr.append("{dollar_sign} ")
+        elif letter == "%": arr.append("{percent} ")
+        elif letter == "^": arr.append("{caret} ")
+        elif letter == "*": arr.append("{asterisk} ")
+        elif letter == "(": arr.append("{open_parenthesis} ")
+        elif letter == ")": arr.append("{close_parenthesis} ")
+        elif letter == "_": arr.append("{underscore} ")
+        elif letter == "-": arr.append("{hyphen} ")
+        elif letter == "+": arr.append("{plus_sign} ")
+        elif letter == "=": arr.append("{equal_sign} ")
+        elif letter == "{": arr.append("{open_curly_bracket} ")
+        elif letter == "}": arr.append("{close_curly_bracket} ")
+        elif letter == "[": arr.append("{open_bracket} ")
+        elif letter == "]": arr.append("{close_bracket} ")
+        elif letter == "|": arr.append("{vertical_bar} ")
+        elif letter == "\\": arr.append("{backslash} ")
+        elif letter == "/": arr.append("{slash} ")
+        elif letter == ":": arr.append("{colon} ")
+        elif letter == ";": arr.append("{semicolon} ")
+        elif letter == "\"": arr.append("{quote} ")
+        elif letter == "\'": arr.append("{apostrophe} ")
+        elif letter == "<": arr.append("{left_angle_bracket} ")
+        elif letter == ">": arr.append("{right_angle_bracket} ")
+        elif letter == ",": arr.append("{comma} ")
+        elif letter == ".": arr.append("{dot} ")
+        elif letter == "?": arr.append("{question_mark} ")
 
     var = ''.join(arr)
-    await ctx.reply(f"`{var}`")
+    await ctx.reply(f"{var}")
     print(f'[log] {ctx.author} requested ]stroktranslate.')
 
 @bot.command(name="reddit")
@@ -1295,7 +1326,8 @@ async def _reddit(ctx, sub:str):
         "nudes",
         "cock",
         "penis",
-        "nsfw"   
+        "nsfw", 
+        "cum"
     ]
     whitelist = [
           "unixporn"
